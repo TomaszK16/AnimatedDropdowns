@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="dropdown">
+            <button onclick="reveal()" id="button" class="dropdown-button">≡ HOME</button>
+            <div id="content" class="dropdown-content">
+                <p><a href="https://www.google.pl/">● Google</a></p>
+                <p><a href="https://www.w3schools.com/">● W3Schools</a></p>
+                <p><a href="https://www.youtube.com/">YouTube</a></p>
+            </div>
+        </div>
+
+        <script>
+            function reveal() {
+                document.getElementById("content").classList.toggle("show");
+                document.getElementById("button").classList.toggle("colorButton");
+            }
+
+            window.onclick = function(event) {
+                if (!event.target.matches("button")) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                            document.getElementById("button").classList.remove("colorButton");
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

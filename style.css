@@ -1,0 +1,54 @@
+body{
+    background-color: #222222;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown {
+    width: 8vw;
+    font-size: 2vh;
+    font-family: Calibri;
+}
+
+.dropdown-button {
+    width: 8vw;
+    background-color: #232323;
+    box-sizing: border-box;
+    padding: 2vh;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2vh;
+    font-family: Calibri;
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    height: 0vh;
+    position: relative;
+    padding: 1vh 0.5vw;
+    text-align: center;
+    background-color: #EEEEEE;
+    box-shadow: 0vh 0.5vh 2vh 0.25vh #e1e1e133;
+    overflow: hidden;
+}
+
+.show {
+    display: block;
+    animation-timing-function: ease-out;
+    animation-name: showing;
+    animation-duration: 1s;
+    height: 15vh;
+}
+
+@keyframes showing {
+    0% {height: 0vh;}
+    100% {height: 15vh;}
+}
+
+.colorButton {
+    color: #1c91ff
+}
