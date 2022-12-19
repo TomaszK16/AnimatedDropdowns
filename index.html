@@ -28,23 +28,12 @@
             let i = 0;
 
             function changeState(){
+            	if(content.classList.contains("show") && content.classList.contains("hide")) content.classList.toggle("show");
+                
                 i++;
                 content.classList.toggle("show");
                 if(i>1) content.classList.toggle("hide");
                 button.classList.toggle("colorButton");
-            }
-
-            window.onclick = function(event) {
-                if (!event.target.matches("button")) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                        if (openDropdown.classList.contains('show')) {
-                            openDropdown.classList.remove('show');
-                            document.getElementById("button").classList.remove("colorButton");
-                        }
-                    }
-                }
             }
         </script>
     </body>
