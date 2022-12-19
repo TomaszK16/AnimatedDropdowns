@@ -29,6 +29,7 @@
 
             function changeState(){
             	if(content.classList.contains("show") && content.classList.contains("hide")) content.classList.toggle("show");
+                if(content.classList.contains("hide") && button.classList.contains("colorButton")) button.classList.toggle("colorButton");
                 
                 i++;
                 content.classList.toggle("show");
