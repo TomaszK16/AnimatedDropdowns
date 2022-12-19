@@ -3,19 +3,35 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="dropdown">
-            <button onclick="reveal()" id="button" class="dropdown-button">≡ HOME</button>
-            <div id="content" class="dropdown-content">
-                <p><a href="https://www.google.pl/">● Google</a></p>
-                <p><a href="https://www.w3schools.com/">● W3Schools</a></p>
-                <p><a href="https://www.youtube.com/">YouTube</a></p>
+        <img src="snowflake.png" class="snowflake" id="sf1">
+        <img src="snowflake.png" class="snowflake" id="sf2">
+        <img src="snowflake.png" class="snowflake" id="sf3">
+        <img src="snowflake.png" class="snowflake" id="sf4">
+        <img src="snowflake.png" class="snowflake" id="sf5">
+        <img src="snowflake.png" class="snowflake" id="sf6">
+        <img src="snowflake.png" class="snowflake" id="sf7">
+        <img src="snowflake.png" class="snowflake" id="sf8">
+        <img src="snowflake.png" class="snowflake" id="sf9">
+        <img src="snowflake.png" class="snowflake" id="sf10">
+        <div id="centerdiv">
+            <div class="dropdown">
+                <button onclick="changeState()" id="button" class="dropdown-button">Kliknij po prezent!</button>
+                <div id="content" class="dropdown-content">
+                    <img src="gift.png" id="giftbox">
+                </div>
             </div>
         </div>
 
         <script>
-            function reveal() {
-                document.getElementById("content").classList.toggle("show");
-                document.getElementById("button").classList.toggle("colorButton");
+            let content = document.getElementById("content");
+            let button = document.getElementById("button");
+            let i = 0;
+
+            function changeState(){
+                i++;
+                content.classList.toggle("show");
+                if(i>1) content.classList.toggle("hide");
+                button.classList.toggle("colorButton");
             }
 
             window.onclick = function(event) {
